@@ -31,7 +31,7 @@
 >  ੈ ✩‧₊˚ TASK 2 ⋆·˚ ༘ *.⋆ <br>
 >
 > *** Walk through your supersampling algorithm and data structures. Why is supersampling useful? What modifications did you make to the rasterization pipeline in the process? Explain how you used supersampling to antialias your triangles: <br>
-> I only made modifications to my RasterizerImp::resolve_to_framebuffer() to include support for supersampling as reccomended by the spec. I added another for loop prior to rgb_framebuffer_target loop to ensure that the Color variable col used in the framebuffer loop includes the correct sample coloring. I otherwise maintained the other 
+> I am reattempting task 2, my initial attempts unfortantely caused the whole framebuffer screen to turn red and currenlty debugging. 
 > *** Show png screenshots of basic/test4.svg with the default viewing parameters and sample rates 1, 4, and 16 to compare them side-by-side. Position the pixel inspector over an area that showcases the effect dramatically; for example, a very skinny triangle corner: <br>
 > 
 > ** Explain why these results are observed: <br>
