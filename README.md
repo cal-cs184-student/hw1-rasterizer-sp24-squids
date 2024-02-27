@@ -2,7 +2,7 @@
 
 > Spring 2024
 >
->  ੈ ✩‧₊˚ TASK 1 ⋆·˚ ༘ *.⋆
+>  ੈ ✩‧₊˚ TASK 1 ⋆·˚ ༘ *.⋆ <br>
 > *** Walk through how you rasterize triangles in your own words:
 > 1) check that the given points are in a counterclockwise format...
 > I refered to https://www.geeksforgeeks.org/orientation-3-ordered-points/ to begin to conceptualize how to check for orientation. In the described implentation from geeksforgeeks it is clear that we are looking for the crossproduct of 2 vectors. These vectors being:
