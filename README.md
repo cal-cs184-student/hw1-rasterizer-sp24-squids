@@ -1,6 +1,7 @@
 # Homework 1: Rasterizer
 
-> Spring 2024
+> Spring 2024 <br>
+>
 >  ੈ ✩‧₊ ˚Overview ⋆·˚ ༘ *.⋆ <br> 
 > *** Give a high-level overview of what you implemented in this homework. Think about what you've built as a whole. Share your thoughts on what interesting things you've learned from completing the homework: <br>
 > In this HW I was tasked with creating a rasterizer that can handle different forms of pixel and level sampling on provided images which are in an SVG format. This includes pixel nearest and pixel bilinear sampling as well as no level sampling to nearest level sampling to bilinear level sampling. The goal for this assignment was to ensure the rasterizer can draw basic points, lines, and shapes, then apply color and texture. <br>
