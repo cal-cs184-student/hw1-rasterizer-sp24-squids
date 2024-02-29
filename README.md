@@ -3,6 +3,7 @@
 > Spring 2024 <br>
 >
 >  GITHUB LINK: https://github.com/cal-cs184-student/hw1-rasterizer-sp24-squids/blob/master/README.md
+>  ASSIGNMENT PG: https://cs184.eecs.berkeley.edu/sp24/p/muuncakez/assignment/3
 > 
 >  ੈ ✩‧₊ ˚Overview ⋆·˚ ༘ *.⋆ <br> 
 > *** Give a high-level overview of what you implemented in this homework. Think about what you've built as a whole. Share your thoughts on what interesting things you've learned from completing the homework: <br>
