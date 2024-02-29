@@ -143,7 +143,7 @@
 > 
 > *** Using a png file you find yourself, show us four versions of the image, using the combinations of L_ZERO and P_NEAREST, L_ZERO and P_LINEAR, L_NEAREST and P_NEAREST, as well as L_NEAREST and P_LINEAR. <br>
 > L-NEAR, P-NEAR: <br>
-> [ L_NEAREST and P_NEAREST](https://github.com/cal-cs184-student/hw1-rasterizer-sp24-squids/assets/90167734/5f438dc6-eba4-4bcb-82ac-f0bf17b240e9)
+> ![L_NEAREST and P_NEAREST](https://github.com/cal-cs184-student/hw1-rasterizer-sp24-squids/assets/90167734/5f438dc6-eba4-4bcb-82ac-f0bf17b240e9)
 > L-NEAR, P-LINE: <br>
 > ![ L_NEAREST and P_LINEAR](https://github.com/cal-cs184-student/hw1-rasterizer-sp24-squids/assets/90167734/8d4e48a7-c012-4fe9-971e-a21a9c592ca3)
 > L-ZERO P-NEAR: <br>
