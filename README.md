@@ -3,7 +3,8 @@
 > Spring 2024
 >  ੈ ✩‧₊ ˚Overview ⋆·˚ ༘ *.⋆ <br> 
 > *** Give a high-level overview of what you implemented in this homework. Think about what you've built as a whole. Share your thoughts on what interesting things you've learned from completing the homework: <br>
-> [ANSWER HERE]
+> In this HW I was tasked with creating a rasterizer that can handle different forms of pixel and level sampling on provided images which are in an SVG format. This includes pixel nearest and pixel bilinear sampling as well as no level sampling to nearest level sampling to bilinear level sampling. The goal for this assignment was to ensure the rasterizer can draw basic points, lines, and shapes, then apply color and texture.
+> I have had to utilize equations and concepts provided during the course as well as the wider web to best digest the core concepts of the assignment, the following write up is a reflection of my efforts and what I have learned from completing this HW. Overall, though, I would say the biggest thing I have learned, however, would be navigating XCode and familiarzing myself with a new language C++! 
 >
 >  ੈ ✩‧₊˚ TASK 1 ⋆·˚ ༘ *.⋆ <br>
 >
@@ -92,7 +93,7 @@
 
 >  ੈ ✩‧₊˚ TASK 5 ⋆·˚ ༘ *.⋆ <br>
 > *** Explain pixel sampling in your own words and describe how you implemented it to perform texture mapping. Briefly discuss the two different pixel sampling methods, nearest and bilinear. <br>
-> **What is pixel sampling?** pixel sampling involves selecting specific points/pixels from an img to gather info about color and other attributes. In other words, imagine a grid laid over an image where each intersection represents a pixel. Sampling involves looking at these individual points and recording the values that represent them. The process of pixel sampling strongly determines the quality of an img. Here we have two different pixel sampling methods, **nearest** and **bilinear**. <br>
+> **What is pixel sampling?** pixel sampling involves selecting specific points/pixels from an img to gather info about color and other attributes. In other words, imagine a grid laid over an image where each intersection represents a pixel. Sampling involves looking at these individual points and recording the values that represent them. The process of pixel sampling strongly determines the quality of an img. Here there are two different pixel sampling methods, **nearest** and **bilinear**. <br>
 > > **nearest**:
 > > <br> Picture a leaf with various shades of green, and imagine this leaf has been cut up by ants who are now trying to peice it back together (why would they do that? ... ¯\_(ツ)_/¯ ). _In nearest pixel sampling, when you want to sample a specific point on the leaf, you'll look for the closest ant (representing a pixel) to that point_. Each ant is their own green shade so their neighboring ant should be too. As the ants attempt to piece the leaf back together, they work diligently to ensure that each piece they carry matches the shade of green of its neighboring pieces. Since each ant represents a pixel with its own green shade, they carefully select the neighboring ants that have similar shades of green to maintain consistency across the reconstructed leaf. This process is repeated until the leaf is all back in one piece! <br>
 > 
@@ -100,7 +101,8 @@
 > >  _In bilinear pixel sampling, when the ants want to sample a point on the leaf, they don't just look at the nearest ant; instead, they consider the four nearest ants surrounding the sampling point. These ants represent the corners of a square surrounding the point_. Each of the four ants surrounding the sampling point carries a specific shade of green but instead of choosing just one of these shades, the ants blend the shades together to approximate the color at the sampling point. When the ants sample a point on the leaf using bilinear sampling, they consider not only the color of the nearest ant but rather the colors of all its surrounding ants. By blending these colors appropriately, they arrive at a more nuanced and interpolated color value for the sampling point. <br>
 >
 > > **implentation**: <br>
-> > [ANSWER HERE]
+> > I used my explainations above to guide me through my code, hence the sample_nearest(...) function performs nearest-neighbor interpolation, where it retrieves the texel value from the nearest integer coordinates to the provided UV coordinates. This method is quick but can produce blocky artifacts. Here, round() is used because I want to find the texel that is closest to the UV coordinates. 
+> > In contrast, the sample_bilinear(...) function calculates the weighted average of the four nearest texels, considering both the horizontal and vertical distances from the provided UV coordinates. To find these surrounding texels, floor() and ceil() are used to determine the integer coordinates of the texels immediately below and above the UV coordinates along both axes. This is because bilinear interpolation requires the texels around the UV coordinates to form a rectangle. This method smooths transitions between texels, resulting in a more visually pleasing interpolation, but at a slightly higher computational cost.
 > 
 > 
 > *** Check out the svg files in the svg/texmap/ directory. Use the pixel inspector to find a good example of where bilinear sampling clearly defeats nearest sampling. Show and compare four png screenshots using nearest sampling at 1 sample per pixel, nearest sampling at 16 samples per pixel, bilinear sampling at 1 sample per pixel, and bilinear sampling at 16 samples per pixel. <br>
@@ -124,10 +126,11 @@
 > > **level sampling**: <br>
 > > In level sampling, the choice of which mipmap level to use depends on factors such as the viewing distance, the size of the texture on the screen, and the level of detail. When viewing an object up close or when the texture occupies a large portion of the screen, it is usually best to use a higher resolution mipmap level to capture fine details + prevent aliasing. Conversely, when viewing an object from a distance or when the texture appears small on the screen, using a lower resolution mipmap level would be better as this helps to conserve memory and improve rendering performance. <br>
 > >
-> > this article helped me conceptualize a lilttle: [nvidia](https://developer.nvidia.com/gpugems/gpugems2/part-iii-high-quality-rendering/chapter-28-mipmap-level-measurement) <br>
+> > this article helped me conceptualize a bit: [nvidia](https://developer.nvidia.com/gpugems/gpugems2/part-iii-high-quality-rendering/chapter-28-mipmap-level-measurement) <br>
 > 
 > > **implentation**: <br>
-> > [ANSWER HERE]
+> > The sample(...) function first determines the appropriate mip level of the texture based on the provided sampling parameters (sp). It calculates the mip level using the get_level(...) function and then compares the passed in sp with the returned value from the get_level() to use the correct sample (determined by the keys L and P). The get_level(...) function calculates the mip level based on the provided sampling parameters. It computes the difference vectors (x and y) and then these vectors are  scaled by the width and height of the texture to bring them into the texel space. Then a boundary check is done to make sure the found level is within the range of available, valid textures. <br>
+> > Both functions have been implemented with the requests of the spec and comments in the assignent itself have been added for further clarity. 
 > 
 > *** You can now adjust your sampling technique by selecting pixel sampling, level sampling, or the number of samples per pixel. Describe the tradeoffs between speed, memory usage, and antialiasing power between the three various techniques. <br> 
 > > **pixel sampling** [L_ZERO]
