@@ -2,7 +2,7 @@
 
 > Spring 2024 <br>
 >
->  GITHUB LINK: https://github.com/cal-cs184-student/hw1-rasterizer-sp24-squids/blob/master/README.md
+>  GITHUB LINK: https://github.com/cal-cs184-student/hw1-rasterizer-sp24-squids/blob/master/README.md <br>
 >  ASSIGNMENT PG: https://cs184.eecs.berkeley.edu/sp24/p/muuncakez/assignment/3
 > 
 >  ੈ ✩‧₊ ˚Overview ⋆·˚ ༘ *.⋆ <br> 
