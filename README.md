@@ -4,7 +4,7 @@
 >  ੈ ✩‧₊ ˚Overview ⋆·˚ ༘ *.⋆ <br> 
 > *** Give a high-level overview of what you implemented in this homework. Think about what you've built as a whole. Share your thoughts on what interesting things you've learned from completing the homework: <br>
 > In this HW I was tasked with creating a rasterizer that can handle different forms of pixel and level sampling on provided images which are in an SVG format. This includes pixel nearest and pixel bilinear sampling as well as no level sampling to nearest level sampling to bilinear level sampling. The goal for this assignment was to ensure the rasterizer can draw basic points, lines, and shapes, then apply color and texture. <br>
-> I have had to utilize equations and concepts provided during the course as well as the wider web to best digest the core concepts of the assignment. The following write up is a reflection of my efforts and what I have learned from completing this HW. Overall, though, I would say the biggest thing I have learned, however, would be navigating XCode and familiarzing myself with a new language C++! 
+> I have had to utilize equations and concepts provided during the course as well as the wider web to best digest the core concepts of the assignment. The following write up is a reflection of my efforts and what I have learned from completing this HW. Overall, though, I would say the biggest thing I have learned would be navigating XCode and familiarzing myself with a new language, C++! 
 >
 >  ੈ ✩‧₊˚ TASK 1 ⋆·˚ ༘ *.⋆ <br>
 >
