@@ -1,4 +1,4 @@
-# Homework 1: Rasterizer
+# ✧.*✧.*✧.*✧.*✧.* Homework 1: Rasterizer ✧.*✧.*✧.*✧.*
 
 > Spring 2024 <br>
 >
